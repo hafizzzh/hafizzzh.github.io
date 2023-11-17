@@ -12,14 +12,21 @@
             padding: 0;
             background: linear-gradient(to right, #3498db, #e74c3c);
             color: #fff;
-            overflow: hidden; /* Hide overflowing gradient during animation */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 70vh; /* Set maximum height for scrolling */
         }
 
         header {
             padding: 20px;
             text-align: center;
             background: linear-gradient(to right, #3498db, #e74c3c);
-            animation: waveAnimation 4s infinite linear; /* Wave animation */
+            animation: waveAnimation 4s infinite linear;
         }
 
         @keyframes waveAnimation {
@@ -35,8 +42,6 @@
         }
 
         section {
-            max-width: 800px;
-            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 5px;
@@ -73,34 +78,37 @@
         <h1>My Portfolio</h1>
     </header>
 
-    <section>
-        <h2>Projects</h2>
+    <div class="container">
 
-        <div class="project">
-            <p>Description of Project 1 goes here.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
+        <section>
+            <h2>Projects</h2>
 
-        <div class="project">
-            <p>Description of Project 2 goes here.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
+            <div class="project">
+                <p>Description of Project 1 goes here.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
 
-    </section>
+            <div class="project">
+                <p>Description of Project 2 goes here.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Contact</h2>
-        <a href="#" class="btn">Send me a message</a>
-    </section>
+        <section>
+            <h2>Contact</h2>
+            <a href="#" class="btn">Send me a message</a>
+        </section>
+
+    </div>
 
 </body>
 
